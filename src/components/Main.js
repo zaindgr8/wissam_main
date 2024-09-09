@@ -208,7 +208,7 @@ const Main = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              Contact Us.  <BiSupport />
+              Contact Us  <BiSupport />
             </motion.h2>
           </Contact>
           <BLOG to="/blog"></BLOG>
