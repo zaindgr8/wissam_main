@@ -38,7 +38,6 @@ const description = [
 const Wrapper = styled.div`
   width: 21rem;
   height: 35vh;
-  // background-color: ${(props) => props.theme.text};
   color: ${(props) => props.theme.body};
   padding: 1.5rem 2rem;
   margin-right: 10rem;
@@ -46,7 +45,6 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  // border: 1px solid ${(props) => props.theme.body};
   transition: all 0.2s ease;
 `;
 
@@ -54,13 +52,13 @@ const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  // transform:translate(-42%, -25%)
+  /* Adjusted the top margin to merge the image on top by 20px */
+  margin-top: 70px;
 
   @media screen and (max-width: 1200px) {
   }
 
   @media screen and (max-width: 768px) {
-    // transform: translate(-42%, -25%);
   }
 `;
 
@@ -91,8 +89,8 @@ const Div02a = styled.div`
 
 const ImageContainer = styled.div`
   position: absolute;
-  width: 250px; /* Set the width of the image container */
-  height: auto; /* You can adjust the height as needed */
+  width: 250px;
+  height: auto;
   transform: translate(70%, -20%);
 
   @media screen and (max-width: 1200px) {
@@ -119,11 +117,10 @@ const TextOverlay = styled.div`
 `;
 
 const Title2 = styled.h2`
-  color: white; /* Set the text color */
+  color: white;
   font-size: 0.7em;
   transform: translate(10%, 0%);
   width: 100px;
-  /* Add additional styles as needed */
 `;
 
 const Div1 = styled.div`
@@ -175,12 +172,9 @@ const Div3 = styled.div`
   gap: 105px;
 
   @media screen and (max-width: 1200px) {
-    // bottom: 0px;
-    // left: 0px;
   }
 
   @media screen and (max-width: 768px) {
-    // transform:translate(-12%, 95%);
   }
 `;
 
@@ -236,45 +230,35 @@ const Footer = styled.footer`
   transition: all 1s ease;
 
   @media screen and (max-width: 1200px) {
-    // bottom: 0px;
-    // left: 0px;
   }
 
   @media screen and (max-width: 768px) {
-    // transform: translate(180%, 10%);
   }
 `;
 
 const Link = styled.a`
-  // background: black;
   color: white;
-  z-index:10;
+  z-index: 10;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   &:focus {
     outline: none;
-    ring-4;
-    ring-cyan-300;
   }
-   &:hover {
-    // background: linear-gradient(to bottom right, #68d391, #4dabf7, #4299e1);
-    box-shadow: 0 12px 20px -10px rgba(0, 0, 0, 0.2), 0 4px 20px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(0, 0, 0, 0.2);
+  &:hover {
+    box-shadow: 0 12px 20px -10px rgba(0, 0, 0, 0.2),
+      0 4px 20px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(0, 0, 0, 0.2);
   }
   color: ${(props) => props.theme.text};
   text-decoration: none;
   padding: 0.5em;
   border-radius: 10px;
   font-size: 1.2em;
-
-  ${Wrapper}:hover & {
-   
-  }
 `;
 
 const Img = styled.img`
   width: 450px;
 
   @media screen and (max-width: 1200px) {
-    width: 400px; // medium screens
+    width: 400px;
   }
 
   @media screen and (max-width: 768px) {

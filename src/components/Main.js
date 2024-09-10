@@ -88,21 +88,61 @@ const BottomBar = styled.div`
   gap: 10px;
 `;
 
-// Skills (Buy Now) section styling
+// Flex container for Perfume buttons with updated styling
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adds space between buttons */
+  margin-top: 20px;
+
+  // Set background color to black and text to white for the perfume buttons
+  a {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+`;
+
+// Buy Now button styling for the 'Buy Now' button without black background
+const BuyNowButton = styled(NavLink)`
+  color: white;
+  text-decoration: none;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  padding: 10px 20px;
+  border-radius: 5px;
+
+  &:hover {
+    transform: none;
+  }
+
+  &:active {
+    transform: none;
+  }
+`;
+
+// Skills (Buy Now) section styling with black background for Perfume buttons
 const SKILLS = styled(NavLink)`
   color: white;
   text-decoration: none;
   z-index: 1;
   display: flex;
   align-items: center;
-`;
+  background-color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
 
-// Flex container for Perfume buttons
-const ButtonContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 20px; /* Adds space between buttons */
-  margin-top: 20px;
+  &:hover {
+    transform: none;
+  }
+
+  &:active {
+    transform: none;
+  }
 `;
 
 const rotate = keyframes`
@@ -154,6 +194,7 @@ const Main = () => {
   return (
     <MainContainer1>
       <img
+        alt=""
         style={{
           objectFit: "cover",
           width: "100%",
@@ -223,7 +264,8 @@ const Main = () => {
         </WORK>
 
         <BottomBar>
-          <SKILLS to="/">
+          {/* Updated Buy Now button without black background */}
+          <BuyNowButton to="/">
             <motion.h3
               initial={{
                 y: 200,
@@ -233,14 +275,13 @@ const Main = () => {
                 y: 0,
                 transition: { type: "spring", duration: 1.5, delay: 1 },
               }}
-              whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
               Buy Now - اشتري الآن
             </motion.h3>
-          </SKILLS>
+          </BuyNowButton>
 
-          {/* Buttons for Perfume 50ML and Perfume 100ML */}
+          {/* Buttons for Perfume 50ML and Perfume 100ML with black background */}
           <ButtonContainer>
             <SKILLS to="/perfume50ml">
               <motion.h3
@@ -252,7 +293,6 @@ const Main = () => {
                   y: 0,
                   transition: { type: "spring", duration: 1.5, delay: 1 },
                 }}
-                whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
                 Perfumes 50ML
@@ -269,7 +309,6 @@ const Main = () => {
                   y: 0,
                   transition: { type: "spring", duration: 1.5, delay: 1 },
                 }}
-                whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
                 Perfume 100ML

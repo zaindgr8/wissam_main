@@ -196,7 +196,7 @@ const Perfume50ml = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              <SKILLS to="/buynowhh">
+              <SKILLS to="/buynow50ml">
                 <Img src={Lyrae} />
                 <Img src={Cirius} />
                 <Img src={Centauri} />

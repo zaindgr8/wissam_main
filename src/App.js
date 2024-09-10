@@ -9,6 +9,7 @@ import WorkPage from "./components/WorkPage";
 import MySkillsPage from "./components/MySkillsPage";
 import SoundBar from "./subComponents/SoundBar";
 import Perfume50ml from "./components/Perfume50ml";
+import BuyNow50ml from "./components/BuyNow50ml";
 function App() {
   const location = useLocation();
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/buynow" element={<WorkPage />} />
             <Route path="/ourproducts" element={<MySkillsPage />} />
             <Route path="/perfume50ml" element={<Perfume50ml />} />
+            <Route path="/buynow50ml" element={<BuyNow50ml />} />
             {/* <Route path="*" element={<Main />} /> */}
           </Routes>
         </AnimatePresence>
