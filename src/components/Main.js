@@ -223,7 +223,7 @@ const Main = () => {
         </WORK>
 
         <BottomBar>
-          <SKILLS to="/ourproducts">
+          <SKILLS to="/">
             <motion.h3
               initial={{
                 y: 200,
@@ -259,7 +259,7 @@ const Main = () => {
               </motion.h3>
             </SKILLS>
 
-            <SKILLS to="/perfume100ml">
+            <SKILLS to="/ourproducts">
               <motion.h3
                 initial={{
                   y: 200,

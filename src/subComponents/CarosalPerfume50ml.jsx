@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import one from "../assets1/2.png";
-import two from "../assets1/1.png";
-import three from "../assets1/5.png";
-import four from "../assets1/3.png";
-import five from "../assets1/4.png";
+import one from "../assets1/Soleil.png";
+import two from "../assets1/Orionis.png";
+import three from "../assets1/Centauri.png";
+import four from "../assets1/Cirius.png";
+import five from "../assets1/Lyrae.png";
 import bl from "../assets1/screen3/button.png";
 import lcon from "../assets1/screen3/connector.png";
 import circle from "../assets1/screen3/circle.png";
@@ -17,13 +17,7 @@ import ufo from "../assets1/danish/UFO.png";
 
 const images = [one, two, three, four, five];
 
-const title = [
-  "Millésime 1991",
-  "Millésime 1994",
-  "Millésime 2000",
-  "Millésime 2003",
-  "Millésime 2011",
-];
+const title = ["Soleil ", "Orionis", "Centauri ", "Cirius", "Lyrae"];
 
 const links = [
   "https://buy.stripe.com/7sIg2Z7vndaLc8w3cj",
@@ -34,11 +28,11 @@ const links = [
 ];
 
 const description = [
-  "Millésime 1991: Timeless elegance, modern charm. Harmonious notes, genderless allure. A classic redefined.",
-  "Indulge in Millésime 1994, a refined fragrance blending vitality and luxury. Unisex and timeless.",
-  "Millésime 2000: A symbol of modern elegance, draped in black opulence. This genderless scent captivates charm.",
-  "Millésime 2003: Embrace warmth and vibrancy in a striking orange hue. A fragrance that embodies ambition!",
-  "Millésime 2011: Unleash passion and sophistication with this red-clad fragrance, a blend of timeless elegance!",
+  "Soleil : Cardamom grapefruit jasmine oud leather tonka vanilla musk..",
+  "Mandarine Aloevera sandal wood rice wood.",
+  "Centauri : amber , oud spices Roses Fruits leatehers woods",
+  "Cirius: tonka bean , vanilla , amberwood & white musk.",
+  "Lyrae: woods Aromatic leather patchouli tobacco.",
 ];
 
 const Wrapper = styled.div`
@@ -305,7 +299,7 @@ const DivUfo = styled.div`
   }
 `;
 
-const Carousel = (props) => {
+const CarosalPerfume50ml = (props) => {
   const [currentImage, setCurrentImage] = useState(0);
 
   const nextImage = () => {
@@ -379,4 +373,4 @@ const Carousel = (props) => {
   );
 };
 
-export default Carousel;
+export default CarosalPerfume50ml;
