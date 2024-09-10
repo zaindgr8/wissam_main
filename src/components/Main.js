@@ -2,26 +2,13 @@ import { motion } from "framer-motion";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
-import PowerButton from "../subComponents/PowerButton";
 import SocialIcons from "../subComponents/SocialIcons";
-import logo from "../assets1/wisamlogo1.png"
+import logo from "../assets1/wisamlogo1.png";
 import { BiSupport } from "react-icons/bi";
 import bg1 from "../assets1/screen1.gif";
-import "./customfont.css"
+import "./customfont.css";
 
-const MainContainer = styled.div`
-  width: 100%;
-  height: 100vh;
-  overflow:hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  object-fit: cover;
-`;
-
+// Main container for the background and layout
 const MainContainer1 = styled.div`
   width: 100%;
   height: 100%;
@@ -34,10 +21,10 @@ const MainContainer1 = styled.div`
   object-fit: cover;
 `;
 
-const Container = styled.div`
-  
-`;
+// Container for central components
+const Container = styled.div``;
 
+// Contact button styling
 const Contact = styled.a`
   color: white;
   position: absolute;
@@ -48,14 +35,16 @@ const Contact = styled.a`
   font-size: 10px;
 
   @media screen and (max-width: 1200px) {
-    font-size: 12px; /* Font size for medium screens */
+    font-size: 12px;
   }
 
   @media screen and (max-width: 600px) {
-    font-size: 1px; /* Font size for small screens */
-    top:40px;
+    font-size: 1px;
+    top: 40px;
   }
 `;
+
+// Blog and Work section styling
 const BLOG = styled(NavLink)`
   color: white;
   position: absolute;
@@ -65,6 +54,7 @@ const BLOG = styled(NavLink)`
   text-decoration: none;
   z-index: 1;
 `;
+
 const WORK = styled(NavLink)`
   font-size: 0.8em;
   color: white;
@@ -75,17 +65,16 @@ const WORK = styled(NavLink)`
   z-index: 1;
   font-family: sans-serif;
 
-  /* Media query for small screens */
   @media screen and (max-width: 600px) {
     transform: translate(-45%, -50%) rotate(-90deg);
   }
 
-  /* Media query for large screens */
   @media screen and (min-width: 601px) {
     transform: translate(-50%, -50%) rotate(-90deg);
   }
 `;
 
+// Bottom bar for the Buy Now section and buttons
 const BottomBar = styled.div`
   position: absolute;
   bottom: 1rem;
@@ -93,16 +82,27 @@ const BottomBar = styled.div`
   right: 0;
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 `;
 
+// Skills (Buy Now) section styling
 const SKILLS = styled(NavLink)`
-  position: absolute;
   color: white;
   text-decoration: none;
   z-index: 1;
   display: flex;
-  bottom: 50px;
+  align-items: center;
+`;
+
+// Flex container for Perfume buttons
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adds space between buttons */
+  margin-top: 20px;
 `;
 
 const rotate = keyframes`
@@ -114,12 +114,12 @@ to{
 }
 `;
 
-
+// Image styling for the logo
 const Img = styled.img`
   width: 150px;
 
   @media screen and (max-width: 1200px) {
-    width: 180px; // medium screens
+    width: 180px;
   }
 
   @media screen and (max-width: 768px) {
@@ -127,6 +127,7 @@ const Img = styled.img`
   }
 `;
 
+// Center button for logo and text
 const Center = styled.button`
   position: absolute;
   top: ${(props) => (props.click ? "85%" : "50%")};
@@ -143,62 +144,89 @@ const Center = styled.button`
   align-items: center;
   transition: all 1s ease;
 
-  // & > :first-child {
-  //   animation: ${rotate} infinite 1.5s linear;
-  // }
-
   & > :last-child {
     display: ${(props) => (props.click ? "none" : "inline-block")};
     padding-top: 1rem;
   }
-
-  
-  
 `;
-
 
 const Main = () => {
   return (
-    
-      <MainContainer1>
-        <img
-          style={{
-            objectFit: "cover",
-            width: "100%",
-            height: "100%",
-            position: "fixed",
-            top: 0,
-            left: 0,
-            zIndex: 1,
-          }}
-          src={bg1}
-          autoPlay
-          loop
-          muted
-        />
-        <Container>
-          {/* <PowerButton /> */}
-          <SocialIcons />
+    <MainContainer1>
+      <img
+        style={{
+          objectFit: "cover",
+          width: "100%",
+          height: "100%",
+          position: "fixed",
+          top: 0,
+          left: 0,
+          zIndex: 1,
+        }}
+        src={bg1}
+        autoPlay
+        loop
+        muted
+      />
+      <Container>
+        <SocialIcons />
 
-          <Center>
-            <Img src={logo} width={230} style={{ zIndex: 2, color: "white" }} />
+        <Center>
+          <Img src={logo} width={230} style={{ zIndex: 2, color: "white" }} />
+          <span
+            style={{
+              fontFamily: "cinzel",
+              color: "white",
+              fontWeight: "bold",
+              fontSize: "2em",
+            }}
+          >
+            Wissam Serdoun
+          </span>
+        </Center>
 
-            <span
-              style={{
-                fontFamily: "cinzel",
-                color: "white",
-                font: "bold",
-                text: "2em",
-              }}
-            >
-              Wissam Serdoun
-            </span>
-          </Center>
+        <Contact target="_blank" href="mailto:info@wissambywissam.com">
+          <motion.h2
+            initial={{
+              y: -200,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            animate={{
+              y: 0,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Contact Us <BiSupport />
+          </motion.h2>
+        </Contact>
 
-          <Contact target="_blank" href="mailto:info@wissambywissam.com">
-            <motion.h2
+        <WORK to="/">
+          <motion.h2
+            initial={{
+              y: -200,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            animate={{
+              y: 0,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            style={{
+              fontFamily: "cinzel",
+            }}
+          >
+            Be You, Be Unique, Be Iconic
+          </motion.h2>
+        </WORK>
+
+        <BottomBar>
+          <SKILLS to="/ourproducts">
+            <motion.h3
               initial={{
-                y: -200,
+                y: 200,
                 transition: { type: "spring", duration: 1.5, delay: 1 },
               }}
               animate={{
@@ -208,31 +236,13 @@ const Main = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              Contact Us  <BiSupport />
-            </motion.h2>
-          </Contact>
-          <BLOG to="/blog"></BLOG>
-          <WORK to="/">
-            <motion.h2
-              initial={{
-                y: -200,
-                transition: { type: "spring", duration: 1.5, delay: 1 },
-              }}
-              animate={{
-                y: 0,
-                transition: { type: "spring", duration: 1.5, delay: 1 },
-              }}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              style={{
-                fontFamily: "cinzel",
-              }}
-            >
-              Be You, Be Unique, Be Iconic
-            </motion.h2>
-          </WORK>
-          <BottomBar>
-            <SKILLS to="/ourproducts">
+              Buy Now - اشتري الآن
+            </motion.h3>
+          </SKILLS>
+
+          {/* Buttons for Perfume 50ML and Perfume 100ML */}
+          <ButtonContainer>
+            <SKILLS to="/perfume50ml">
               <motion.h3
                 initial={{
                   y: 200,
@@ -245,14 +255,30 @@ const Main = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                Buy Now - اشتري الآن
+                Perfumes 50ML
               </motion.h3>
             </SKILLS>
-          </BottomBar>
-        </Container>
-        
-      </MainContainer1>
 
+            <SKILLS to="/perfume100ml">
+              <motion.h3
+                initial={{
+                  y: 200,
+                  transition: { type: "spring", duration: 1.5, delay: 1 },
+                }}
+                animate={{
+                  y: 0,
+                  transition: { type: "spring", duration: 1.5, delay: 1 },
+                }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                Perfume 100ML
+              </motion.h3>
+            </SKILLS>
+          </ButtonContainer>
+        </BottomBar>
+      </Container>
+    </MainContainer1>
   );
 };
 
