@@ -88,7 +88,7 @@ const BottomBar = styled.div`
   gap: 10px;
 `;
 
-// Flex container for Perfume buttons with updated styling
+// Flex container for Perfume buttons with updated styling for responsiveness
 const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -102,6 +102,16 @@ const ButtonContainer = styled.div`
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    gap: 10px; /* Reduce gap on smaller screens */
+    margin-top: 10px; /* Reduce margin on mobile */
+    flex-direction: column; /* Stack buttons vertically on mobile */
+    a {
+      padding: 8px 15px; /* Adjust button size for mobile */
+      font-size: 0.8em; /* Adjust text size for mobile */
+    }
   }
 `;
 
@@ -142,6 +152,11 @@ const SKILLS = styled(NavLink)`
 
   &:active {
     transform: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 8px 15px; /* Adjust button padding for mobile */
+    font-size: 0.8em; /* Adjust text size for mobile */
   }
 `;
 
@@ -311,7 +326,7 @@ const Main = () => {
                 }}
                 whileTap={{ scale: 0.9 }}
               >
-                Perfume 100ML
+                Perfumes 100ML
               </motion.h3>
             </SKILLS>
           </ButtonContainer>
