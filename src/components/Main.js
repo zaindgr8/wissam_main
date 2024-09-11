@@ -135,7 +135,7 @@ const BuyNowButton = styled(NavLink)`
   }
 `;
 
-// Skills (Buy Now) section styling with black background for Perfume buttons
+// Skills (Buy Now) section styling with black background for Perfume buttons and updated with white border and rounded corners
 const SKILLS = styled(NavLink)`
   color: white;
   text-decoration: none;
@@ -144,7 +144,8 @@ const SKILLS = styled(NavLink)`
   align-items: center;
   background-color: black;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 30px; /* Makes the button rounded */
+  border: 2px solid white; /* Adds a white border */
 
   &:hover {
     transform: none;
@@ -296,7 +297,7 @@ const Main = () => {
             </motion.h3>
           </BuyNowButton>
 
-          {/* Buttons for Perfume 50ML and Perfume 100ML with black background */}
+          {/* Buttons for Perfume 50ML and Perfume 100ML with white border and rounded corners */}
           <ButtonContainer>
             <SKILLS to="/perfume50ml">
               <motion.h3
