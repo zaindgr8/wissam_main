@@ -46,36 +46,6 @@ const description = [
 const sideImages = [onered, twoyellow, threeblack1, fourblue, fivegreen1];
 
 // Styled components
-const Wrapper = styled.div`
-  width: 21rem;
-  height: 35vh;
-  color: ${(props) => props.theme.body};
-  padding: 1.5rem 2rem;
-  margin-right: 10rem;
-  border-radius: 0 50px 0 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: all 0.2s ease;
-`;
-
-const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-`;
-
-const Div02a = styled.div`
-  position: absolute;
-  top: ${(props) => (props.click ? "85%" : "50%")};
-  left: ${(props) => (props.click ? "92%" : "50%")};
-  transform: translate(40%, -100%);
-  background-color: transparent;
-  cursor: pointer;
-  z-index: 2;
-  transition: all 1s ease;
-`;
-
 const SideImage = styled.img`
   position: absolute;
   top: 70%;
@@ -83,13 +53,79 @@ const SideImage = styled.img`
   transform: translateY(-50%);
   width: 170px;
   z-index: 2;
+
+  @media (max-width: 768px) {
+    left: -40px; /* Add margin-left of 20px for mobile screens */
+  }
+`;
+
+const Wrapper = styled.div`
+  width: 21rem;
+  height: 35vh;
+  // background-color: ${(props) => props.theme.text};
+  color: ${(props) => props.theme.body};
+  padding: 1.5rem 2rem;
+  margin-right: 10rem;
+  border-radius: 0 50px 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // border: 1px solid ${(props) => props.theme.body};
+  transition: all 0.2s ease;
+`;
+
+const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  // transform:translate(-42%, -25%)
+
+  @media screen and (max-width: 1200px) {
+  }
+
+  @media screen and (max-width: 768px) {
+    // transform: translate(-42%, -25%);
+  }
+`;
+
+const Div02a = styled.div`
+  position: absolute;
+  top: ${(props) => (props.click ? "85%" : "50%")};
+  left: ${(props) => (props.click ? "92%" : "50%")};
+  transform: translate(40%, -100%);
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease;
+
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const ImageContainer = styled.div`
   position: absolute;
-  width: 250px;
-  height: auto;
+  width: 250px; /* Set the width of the image container */
+  height: auto; /* You can adjust the height as needed */
   transform: translate(70%, -20%);
+
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Image2 = styled.img`
@@ -107,10 +143,11 @@ const TextOverlay = styled.div`
 `;
 
 const Title2 = styled.h2`
-  color: white;
+  color: white; /* Set the text color */
   font-size: 0.7em;
   transform: translate(10%, 0%);
   width: 100px;
+  /* Add additional styles as needed */
 `;
 
 const Div1 = styled.div`
@@ -119,6 +156,14 @@ const Div1 = styled.div`
   position: absolute;
   justify-content: space-evenly;
   align-items: center;
+
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Title = styled.h2`
@@ -133,6 +178,14 @@ const Div0 = styled.div`
   position: absolute;
   justify-content: space-evenly;
   align-items: center;
+
+  @media screen and (max-width: 1200px) {
+    transform: translate(-80%, -150%);
+  }
+
+  @media screen and (max-width: 768px) {
+    transform: translate(-80%, -150%);
+  }
 `;
 
 const Div3 = styled.div`
@@ -144,15 +197,36 @@ const Div3 = styled.div`
   align-items: center;
   bottom: -15%;
   gap: 105px;
+
+  @media screen and (max-width: 1200px) {
+    // bottom: 0px;
+    // left: 0px;
+  }
+
+  @media screen and (max-width: 768px) {
+    // transform:translate(-12%, 95%);
+  }
 `;
 
 const Div01a = styled.div`
   position: fixed;
   bottom: 30px;
   right: 75px;
+  border: none;
+  outline: none;
   background-color: transparent;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease;
   z-index: -10;
+  @media screen and (max-width: 1200px) {
+  }
+
+  @media screen and (max-width: 768px) {
+  }
 `;
 
 const DivContainer = styled.div`
@@ -162,11 +236,20 @@ const DivContainer = styled.div`
   align-items: center;
   transform: translate(0%, -25%);
   transition: all 0.5s ease;
+
+  @media screen and (max-width: 1200px) {
+    transform: translate(-40%, -25%);
+  }
+  @media screen and (max-width: 768px) {
+    transform: translate(-40%, -25%);
+  }
 `;
 
 const Footer = styled.footer`
   position: fixed;
   bottom: -15%;
+  border: none;
+  outline: none;
   background-color: transparent;
   cursor: pointer;
   z-index: 5;
@@ -175,28 +258,52 @@ const Footer = styled.footer`
   justify-content: center;
   align-items: center;
   transition: all 1s ease;
+
+  @media screen and (max-width: 1200px) {
+    // bottom: 0px;
+    // left: 0px;
+  }
+
+  @media screen and (max-width: 768px) {
+    // transform: translate(180%, 10%);
+  }
 `;
 
 const Link = styled.a`
+  // background: black;
   color: white;
+  z-index:10;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   &:focus {
     outline: none;
     ring-4;
     ring-cyan-300;
   }
-  &:hover {
-    box-shadow: 0 12px 20px -10px rgba(0, 0, 0, 0.2),
-      0 4px 20px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(0, 0, 0, 0.2);
+   &:hover {
+    // background: linear-gradient(to bottom right, #68d391, #4dabf7, #4299e1);
+    box-shadow: 0 12px 20px -10px rgba(0, 0, 0, 0.2), 0 4px 20px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(0, 0, 0, 0.2);
   }
+  color: ${(props) => props.theme.text};
   text-decoration: none;
   padding: 0.5em;
   border-radius: 10px;
   font-size: 1.2em;
+
+  ${Wrapper}:hover & {
+   
+  }
 `;
 
 const Img = styled.img`
   width: 450px;
+
+  @media screen and (max-width: 1200px) {
+    width: 400px; // medium screens
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 320px;
+  }
 `;
 
 const DivUfo = styled.div`
@@ -208,6 +315,12 @@ const DivUfo = styled.div`
   align-items: center;
   justify-content: center;
   transition: all 1s ease;
+
+  @media screen and (max-width: 1200px) {
+  }
+
+  @media screen and (max-width: 768px) {
+  }
 `;
 
 const CarosalPerfume50ml = (props) => {
