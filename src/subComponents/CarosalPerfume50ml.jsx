@@ -26,11 +26,11 @@ const title = ["Soleil", "Orionis", "Centauri", "Cirius", "Lyrae"];
 
 // Links for each perfume
 const links = [
-  "https://buy.stripe.com/aEUg2ZeXPdaL4G46oF",
-  "https://buy.stripe.com/aEUg2ZeXPdaL4G46oF",
-  "https://buy.stripe.com/aEUg2ZeXPdaL4G46oF",
-  "https://buy.stripe.com/aEUg2ZeXPdaL4G46oF",
-  "https://buy.stripe.com/aEUg2ZeXPdaL4G46oF",
+  "https://buy.stripe.com/14kbMJ02VfiTegEdR8",
+  "https://buy.stripe.com/14kbMJ02VfiTegEdR8",
+  "https://buy.stripe.com/14kbMJ02VfiTegEdR8",
+  "https://buy.stripe.com/14kbMJ02VfiTegEdR8",
+  "https://buy.stripe.com/14kbMJ02VfiTegEdR8",
 ];
 
 // Descriptions for each perfume
