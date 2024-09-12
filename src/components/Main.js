@@ -44,17 +44,6 @@ const Contact = styled.a`
   }
 `;
 
-// Blog and Work section styling
-const BLOG = styled(NavLink)`
-  color: white;
-  position: absolute;
-  top: 50%;
-  right: calc(1rem + 2vw);
-  transform: rotate(90deg) translate(-50%, -50%);
-  text-decoration: none;
-  z-index: 1;
-`;
-
 const WORK = styled(NavLink)`
   font-size: 0.8em;
   color: white;
@@ -161,15 +150,6 @@ const SKILLS = styled(NavLink)`
   }
 `;
 
-const rotate = keyframes`
-from{
-    transform: rotate(0);
-}
-to{
-    transform: rotate(360deg);
-}
-`;
-
 // Image styling for the logo
 const Img = styled.img`
   width: 150px;
@@ -198,6 +178,7 @@ const Center = styled.button`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-left: 30px;
   transition: all 1s ease;
 
   & > :last-child {
