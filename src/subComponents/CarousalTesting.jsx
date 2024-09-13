@@ -14,7 +14,11 @@ import right from "../assets1/screen3/bra1.png";
 import left from "../assets1/screen3/bla1.png";
 import { motion } from "framer-motion";
 import ufo from "../assets1/danish/UFO.png";
-
+import oneingredient from "../assets1/oningredient.png";
+import twoingredient from "../assets1/twoingredient.png";
+import threeingredient from "../assets1/threeingredient.png";
+import fouringredient from "../assets1/fouringredient.png";
+import fiveingredient from "../assets1/fiveingredient.png";
 const images = [one, two, three, four, five];
 
 const title = [
@@ -40,7 +44,25 @@ const description = [
   "Millésime 2003: Embrace warmth and vibrancy in a striking orange hue. A fragrance that embodies ambition!",
   "Millésime 2011: Unleash passion and sophistication with this red-clad fragrance, a blend of timeless elegance!",
 ];
+const sideImages = [
+  oneingredient,
+  twoingredient,
+  threeingredient,
+  fouringredient,
+  fiveingredient,
+];
+const SideImage = styled.img`
+  position: absolute;
+  top: 70%;
+  ${(props) => (props.position === "right" ? "right: 60%;" : "left: 10%;")}
+  transform: translateY(-50%);
+  width: 170px;
+  z-index: 2;
 
+  @media (max-width: 768px) {
+    left: -40px; /* Add margin-left of 20px for mobile screens */
+  }
+`;
 const Wrapper = styled.div`
   width: 21rem;
   height: 35vh;
@@ -323,6 +345,11 @@ const Carousel = (props) => {
   return (
     <Wrapper>
       <DivContainer>
+        <SideImage
+          src={sideImages[currentImage]}
+          position="right"
+          alt="Side Image"
+        />
         <DivUfo>
           <motion.h2
             initial={{

@@ -14,7 +14,7 @@ import right from "../assets1/screen3/bra1.png";
 import left from "../assets1/screen3/bla1.png";
 import { motion } from "framer-motion";
 import ufo from "../assets1/danish/UFO.png";
-import onered from "../assets1/red.png";
+import onered from "../assets1/cardamom.png";
 import fourblue from "../assets1/blue1.png";
 import fivegreen1 from "../assets1/green1.png";
 import threeblack1 from "../assets1/black1.png";
